@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            main {
+                border: 5px solid rgb(255, 174, 241);
+                display: flex;
+                cursor: pointer;
+            }
+            
+            div:nth-child(1) {
+                
+                width: 60vh;
+                height: 60vh;
+                font-size: 35vh;
+                background-color: darkblue;
+            }
+            div :last-child {
+                width: 50vh;
+                height: 60vh;
+                font-size: 50;
+                background-color: darkgrey;
+            }
+            div:hover{ 
+                background-color: crimson;
+            }
+
+            </style>
+</head>
+<body>
+   
+    <main>
+        <div coracao> ❤</div>
+        <div numero> 0 </div>
+
+    </main>
+    <script>
+    const domMain = document.querySelector("main")
+    // const domDivNum = document.querySelector("main div:last-child")
+    const domDivNum = domMain.querySelector("div:last-child")
+    let counter = 0
+    domMain.addEventListener("click", () =>{
+        counter++
+        domDivNum.innerHTML = counter
+    })   
+    </script>
+</body>
+</html>
